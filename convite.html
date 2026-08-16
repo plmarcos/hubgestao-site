@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Convite — Hub Gestão</title>
+<style>
+  :root{
+    --bg:#f1f5f9; --card:#ffffff; --texto:#0f172a; --suave:#64748b;
+    --borda:#e2e8f0; --verde:#0d9488; --verde-claro:#ccfbf1; --verde-escuro:#0f766e;
+    --aviso-bg:#fef3c7; --aviso-borda:#f59e0b; --aviso-tx:#78350f;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#020617; --card:#0f172a; --texto:#e2e8f0; --suave:#94a3b8;
+      --borda:#1e293b; --verde:#2dd4bf; --verde-claro:#134e4a; --verde-escuro:#5eead4;
+      --aviso-bg:#422006; --aviso-borda:#b45309; --aviso-tx:#fde68a;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:0 16px 64px; background:var(--bg); color:var(--texto);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; font-size:16px; -webkit-font-smoothing:antialiased;
+  }
+  main{max-width:520px; margin:0 auto}
+
+  .topo{
+    background:linear-gradient(135deg,#14b8a6,#0891b2);
+    margin:0 -16px 0; padding:44px 24px 52px; text-align:center; color:#fff;
+    border-radius:0 0 28px 28px;
+  }
+  .cubo{width:84px;height:84px;margin:0 auto 18px;display:block}
+  .topo h1{font-size:30px;margin:0 0 6px;letter-spacing:-.6px;font-weight:800}
+  .topo p{margin:0;opacity:.94;font-size:16px;line-height:1.45}
+
+  .cartao{
+    background:var(--card); border:1px solid var(--borda); border-radius:16px;
+    padding:22px; margin:18px 0;
+  }
+  h2{font-size:18px;margin:0 0 10px;letter-spacing:-.2px}
+  p{margin:0 0 12px}
+  p:last-child{margin-bottom:0}
+  .suave{color:var(--suave);font-size:14.5px}
+
+  .passos{list-style:none;padding:0;margin:0;counter-reset:p}
+  .passos li{
+    counter-increment:p; position:relative; padding-left:46px; margin-bottom:20px;
+  }
+  .passos li:last-child{margin-bottom:0}
+  .passos li::before{
+    content:counter(p); position:absolute; left:0; top:-2px;
+    width:32px;height:32px;border-radius:50%;
+    background:var(--verde-claro); color:var(--verde-escuro);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:800;font-size:15px;
+  }
+  .passos strong{display:block;margin-bottom:2px}
+  .passos span{color:var(--suave);font-size:14.5px}
+
+  .botao{
+    display:block; background:var(--verde); color:#fff; text-decoration:none;
+    text-align:center; font-weight:800; font-size:17px;
+    padding:17px 20px; border-radius:14px; margin:22px 0 8px;
+  }
+  .botao.pendente{background:var(--borda); color:var(--suave); pointer-events:none}
+
+  .aviso{
+    background:var(--aviso-bg); border:1px solid var(--aviso-borda); color:var(--aviso-tx);
+    border-radius:12px; padding:15px 17px; margin:18px 0; font-size:14.5px; line-height:1.55;
+  }
+  .aviso strong{color:inherit}
+
+  footer{margin-top:28px;text-align:center;color:var(--suave);font-size:13.5px;line-height:1.6}
+  footer a{color:var(--verde)}
+</style>
+</head>
+<body>
+
+<div class="topo">
+  <svg class="cubo" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+    <path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>
+  </svg>
+  <h1>Hub Gestão</h1>
+  <p>Você foi convidado para testar o app da nossa equipe.</p>
+</div>
+
+<main>
+
+  <div class="cartao">
+    <h2>O que é</h2>
+    <p>Um app para organizar o trabalho do setor: a <strong>escala do mês</strong>, o
+      <strong>controle de validade</strong> dos produtos, as <strong>trocas</strong> com
+      fornecedor, os <strong>avisos</strong> da equipe e a <strong>conversa</strong> entre a
+      gente — tudo num lugar só, no celular.</p>
+    <p class="suave">Está em fase de teste. Se algo parecer errado ou travar, me avise: é
+      exatamente para isso que este teste existe.</p>
+  </div>
+
+  <div class="aviso">
+    <strong>Antes de começar:</strong> você precisa de uma <strong>conta do Google</strong>
+    (aquele e-mail que termina em <strong>@gmail.com</strong>) no celular. E-mail do trabalho
+    não funciona aqui — o link vai dizer que o app não está disponível.
+    Se não tiver, dá para criar em dois minutos.
+  </div>
+
+  <div class="cartao">
+    <h2>Como instalar</h2>
+    <ol class="passos">
+      <li>
+        <strong>Me passe seu Gmail</strong>
+        <span>Preciso cadastrar ele na lista de testadores. Sem isso, o link não abre.</span>
+      </li>
+      <li>
+        <strong>Toque no botão abaixo e aceite o convite</strong>
+        <span>Abre uma página do Google. É só confirmar que você quer participar do teste.</span>
+      </li>
+      <li>
+        <strong>Baixe o app na Play Store</strong>
+        <span>Na mesma página aparece o link para instalar. Depois é só abrir e criar sua conta.</span>
+      </li>
+    </ol>
+
+    <!-- LINK-CONVITE -->
+    <a class="botao pendente" href="#">Aguardando o link do convite</a>
+    <p class="suave" style="text-align:center">O botão será liberado assim que o teste for
+      publicado.</p>
+  </div>
+
+  <div class="cartao">
+    <h2>O que esperar ao abrir</h2>
+    <p>Depois de criar sua conta, ela vai aparecer como <strong>“em análise”</strong> e você
+      não verá nenhum dado da loja ainda.</p>
+    <p><strong>Isso é normal, não é defeito.</strong> Eu preciso liberar cada conta na mão —
+      é assim que a gente garante que só quem é da equipe enxerga escala, aviso e conversa.
+      Me avise quando se cadastrar que eu libero na hora.</p>
+  </div>
+
+  <div class="cartao">
+    <h2>Sobre seus dados</h2>
+    <p>O app guarda o que precisa para funcionar: seu nome, e-mail, telefone, foto de perfil
+      se você puser, e o que você escreve na conversa da equipe.</p>
+    <p>Não tem anúncio, não tem rastreador e <strong>não usa sua localização</strong>.
+      Você pode apagar sua conta a qualquer momento, dentro do app, em Configurações.</p>
+    <p class="suave">Está tudo explicado na
+      <a href="./politica-de-privacidade.html">política de privacidade</a>.</p>
+  </div>
+
+  <footer>
+    <p>Dúvida ou problema? Fala comigo.<br>
+      <a href="mailto:plmarcos2019@gmail.com">plmarcos2019@gmail.com</a></p>
+    <p>App independente, feito para a equipe da loja.<br>
+      Não é sistema oficial de nenhuma rede de supermercados.</p>
+  </footer>
+
+</main>
+</body>
+</html>
